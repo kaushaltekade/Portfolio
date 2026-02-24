@@ -34,8 +34,8 @@ const basePhotos = [
     "20251217_023414.webp",
 ];
 
-// Duplicate the array to create a massive wall of photos (e.g., 4 times 26 = 104 photos)
-const photos = [...basePhotos, ...basePhotos, ...basePhotos, ...basePhotos]
+// Duplicate the array to create a massive wall of photos (2 times 26 = 52 photos)
+const photos = [...basePhotos, ...basePhotos]
 
 export const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
     useEffect(() => {

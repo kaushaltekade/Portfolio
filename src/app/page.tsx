@@ -4,13 +4,15 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { AboutSection } from "@/components/AboutSection";
-import { SkillsSection } from "@/components/SkillsSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
 import { SplashScreen } from "@/components/SplashScreen";
+import dynamic from "next/dynamic";
+
+const AboutSection = dynamic(() => import("@/components/AboutSection").then(m => m.AboutSection));
+const SkillsSection = dynamic(() => import("@/components/SkillsSection").then(m => m.SkillsSection));
+const ProjectsSection = dynamic(() => import("@/components/ProjectsSection").then(m => m.ProjectsSection));
+const ServicesSection = dynamic(() => import("@/components/ServicesSection").then(m => m.ServicesSection));
+const ContactSection = dynamic(() => import("@/components/ContactSection").then(m => m.ContactSection));
+const Footer = dynamic(() => import("@/components/Footer").then(m => m.Footer));
 
 export default function Home() {
     const [showSplash, setShowSplash] = useState(true);
