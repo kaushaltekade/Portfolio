@@ -73,13 +73,13 @@ export const ContactSection = () => {
 
           <ScrollReveal delay={200}>
             <div className="flex justify-center gap-5 mt-12">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/50 hover:text-foreground transition-colors duration-300 cursor-pointer">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-muted-foreground/50 hover:text-foreground transition-colors duration-300 cursor-pointer">
                 <Github size={16} />
               </a>
-              <a href="mailto:your-email@example.com" className="text-muted-foreground/50 hover:text-foreground transition-colors duration-300 cursor-pointer">
+              <a href="mailto:your-email@example.com" aria-label="Send an email" className="text-muted-foreground/50 hover:text-foreground transition-colors duration-300 cursor-pointer">
                 <Mail size={16} />
               </a>
-              <a href="https://yourdomain.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/50 hover:text-foreground transition-colors duration-300 cursor-pointer">
+              <a href="https://yourdomain.com" target="_blank" rel="noopener noreferrer" aria-label="Personal Website" className="text-muted-foreground/50 hover:text-foreground transition-colors duration-300 cursor-pointer">
                 <Globe size={16} />
               </a>
             </div>

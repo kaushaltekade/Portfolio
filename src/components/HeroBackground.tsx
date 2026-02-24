@@ -27,7 +27,7 @@ export const HeroBackground = () => {
                             alt="Background Portrait"
                             fill
                             className="object-contain lg:object-cover object-center opacity-100"
-                            sizes="100vw"
+                            sizes="(max-width: 768px) 100vw, 1000px"
                             priority
                             fetchPriority="high"
                         />

@@ -70,10 +70,10 @@ export const HeroSection = () => {
         </div>
 
         <div className="flex justify-center gap-5 animate-fade-up" style={{ animationDelay: "0.45s" }}>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-all duration-300 ease-flow">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-muted-foreground hover:text-foreground transition-all duration-300 ease-flow">
             <Github size={18} />
           </a>
-          <a href="mailto:your-email@example.com" className="text-muted-foreground hover:text-foreground transition-all duration-300 ease-flow">
+          <a href="mailto:your-email@example.com" aria-label="Send an email" className="text-muted-foreground hover:text-foreground transition-all duration-300 ease-flow">
             <Mail size={18} />
           </a>
         </div>
