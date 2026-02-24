@@ -9,7 +9,7 @@ export const HeroBackground = () => {
     const y = useTransform(scrollY, [0, 800], [0, -400]);
 
     // We are using the main portrait photo here
-    const photo = "main.jpg";
+    const photo = "main-2.jpg";
 
     return (
         <div className="absolute inset-0 z-0 pointer-events-none h-[200vh]">
@@ -18,7 +18,7 @@ export const HeroBackground = () => {
             >
                 <motion.div
                     style={{ y }}
-                    className="w-full h-[150%] absolute inset-0 flex items-center justify-center -mt-20 lg:mt-0"
+                    className="w-full h-[130%] absolute inset-0 flex items-center justify-center -mt-20 lg:mt-0"
                 >
                     <div className="relative w-full h-full lg:h-full lg:w-full mx-auto flex items-center justify-center">
                         {/* The photo */}
@@ -31,7 +31,7 @@ export const HeroBackground = () => {
                             priority
                         />
                         {/* Only a bottom gradient to gently fade into the next section */}
-                        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent z-10" />
+                        <div className="absolute bottom-0 left-0 w-full h-[20vh] bg-gradient-to-t from-black via-black/70 to-transparent z-10 pointer-events-none" />
                     </div>
                 </motion.div>
             </motion.div>
