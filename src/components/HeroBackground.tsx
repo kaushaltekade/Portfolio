@@ -29,6 +29,7 @@ export const HeroBackground = () => {
                             className="object-contain lg:object-cover object-center opacity-100"
                             sizes="100vw"
                             priority
+                            fetchPriority="high"
                         />
                         {/* Only a bottom gradient to gently fade into the next section */}
                         <div className="absolute bottom-0 left-0 w-full h-[20vh] bg-gradient-to-t from-black via-black/70 to-transparent z-10 pointer-events-none" />

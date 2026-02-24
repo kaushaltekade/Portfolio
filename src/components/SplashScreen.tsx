@@ -34,8 +34,8 @@ const basePhotos = [
     "20251217_023414.webp",
 ];
 
-// Duplicate the array to create a massive wall of photos (2 times 26 = 52 photos)
-const photos = [...basePhotos, ...basePhotos]
+// We use just the base photos to limit DOM weight and prevent main-thread blocking
+const photos = basePhotos;
 
 export const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
     useEffect(() => {
@@ -76,22 +76,17 @@ export const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
                         const isMediumV = i % 7 === 0 && !isLarge;
                         const isMediumH = i % 5 === 0 && !isLarge && !isMediumV;
 
+                        const isPriority = i < 12;
+
                         return (
-                            <motion.div
+                            <div
                                 key={i}
-                                className={`relative overflow-hidden rounded-xl bg-zinc-900 border border-white/5 ${isLarge ? "col-span-2 row-span-2" :
+                                className={`relative overflow-hidden rounded-xl bg-zinc-900 border border-white/5 opacity-0 animate-splash-appear ${isLarge ? "col-span-2 row-span-2" :
                                     isMediumV ? "col-span-1 row-span-2" :
                                         isMediumH ? "col-span-2 row-span-1" :
                                             "col-span-1 row-span-1"
                                     }`}
-                                initial={{ opacity: 0, scale: 0.8, y: 30 }}
-                                animate={{ opacity: 0.5, scale: 1, y: 0 }}
-                                transition={{
-                                    duration: 0.8,
-                                    ease: "easeOut",
-                                    // create a sweeping delay pattern
-                                    delay: (i % 20) * 0.05
-                                }}
+                                style={{ animationDelay: `${(i % 20) * 0.05}s` }}
                             >
                                 <Image
                                     src={`/photos/${photo}`}
@@ -99,9 +94,10 @@ export const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110"
                                     sizes="(max-width: 640px) 30vw, 15vw"
-                                    priority={i < 15}
+                                    priority={isPriority}
+                                    fetchPriority={isPriority ? "high" : "auto"}
                                 />
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>

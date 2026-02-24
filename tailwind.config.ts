@@ -91,6 +91,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
         },
+        "splash-appear": {
+          "0%": { opacity: "0", transform: "scale(0.8) translateY(30px)" },
+          "100%": { opacity: "0.5", transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -98,6 +102,7 @@ export default {
         "fade-up": "fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         float: "float 4s ease-in-out infinite",
+        "splash-appear": "splash-appear 0.8s ease-out forwards",
       },
     },
   },
