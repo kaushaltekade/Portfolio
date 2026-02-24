@@ -1,4 +1,4 @@
-import { Github, Mail, ArrowDown } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -79,13 +79,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <button
-        onClick={() => scrollTo("#about")}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-all duration-300 ease-flow animate-float cursor-pointer"
-        aria-label="Scroll down"
-      >
-        <ArrowDown size={18} />
-      </button>
+
     </section>
   );
 };
