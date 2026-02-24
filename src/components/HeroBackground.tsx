@@ -9,7 +9,7 @@ export const HeroBackground = () => {
     const y = useTransform(scrollY, [0, 800], [0, -400]);
 
     // We are using the main portrait photo here
-    const photo = "main-2.jpg";
+    const photo = "main-2.webp";
 
     return (
         <div className="absolute inset-0 z-0 pointer-events-none h-[200vh]">
