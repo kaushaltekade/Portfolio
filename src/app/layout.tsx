@@ -5,6 +5,9 @@ import { Providers } from "@/components/providers";
 export const metadata: Metadata = {
     title: "Portfolio",
     description: "My Portfolio",
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({
