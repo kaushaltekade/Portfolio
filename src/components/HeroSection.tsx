@@ -2,6 +2,7 @@ import { Github, Mail, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HeroBackground } from "./HeroBackground";
 
 const roles = [
   "Full-Stack Developer",
@@ -27,6 +28,7 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <HeroBackground />
       {/* Radial glow behind name */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-foreground/[0.03] blur-[100px]" />
 
